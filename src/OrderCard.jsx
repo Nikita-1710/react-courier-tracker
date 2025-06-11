@@ -20,14 +20,14 @@ const BADGE_PRIORITY_CLASSES = {
 };
 
 
-function OrderCard({ task, priority, index, onDelete }) {
+function OrderCard({ courier, status, index, onDelete }) {
     return (
-        <div className={`bg-white p-5 m-5 rounded-md shadow-lg relative ${STATUS_PRIORITY_CLASSES[priority]}`}>
-            <span className={`block w-[100px] border text-center rounded-full ${BADGE_PRIORITY_CLASSES[priority]}`}>
-                {priority}
+        <div className={`bg-white p-5 m-5 rounded-md shadow-lg relative ${STATUS_PRIORITY_CLASSES[status]}`}>
+            <span className={`block w-[100px] border text-center rounded-full ${BADGE_PRIORITY_CLASSES[status]}`}>
+                {status}
             </span>
 
-            <h1 className="mt-2 text-xl">{task}</h1>
+            <h1 className="mt-2 text-xl">{courier}</h1>
 
             <TrashIcon
                 className="absolute top-2 right-2 cursor-pointer"
